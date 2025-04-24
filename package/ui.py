@@ -1,6 +1,5 @@
-from qurantine import start
+from qurantine import start, quarantine, log_data
 import sys
-import os
 from pathlib import Path
 from functools import partial    
 
@@ -9,9 +8,8 @@ from PyQt6.QtCore import QSize, Qt, QRect, QTimer
 from PyQt6.QtGui import QPainter, QPen, QColor, QFont, QIcon, QCursor
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
-    QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog    
+    QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog, QDialog, QFormLayout, QComboBox, QSlider, QDialogButtonBox    
 )
-
 
 
 class CircularProgressBar(QWidget):
@@ -101,7 +99,7 @@ class MainWindow(QMainWindow):
         bell.setIcon(QIcon(str(icons_dir / "bell.svg")))
         bell.setIconSize(QSize(36,36))
         sb_v.addWidget(bell)
-        # little red “1”
+        # little red "1"
         badge = QLabel("1", sidebar)
         badge.setStyleSheet(
             "background:#E63946; color:white;"
@@ -117,8 +115,9 @@ class MainWindow(QMainWindow):
         gear.setIconSize(QSize(36,36))
         sb_v.addWidget(gear)
 
-        main_h.addWidget(sidebar)
 
+        main_h.addWidget(sidebar)
+        gear.clicked.connect(self.open_settings)
         main_v = QVBoxLayout()
         main_v.setContentsMargins(0,0,0,0)
 
@@ -222,11 +221,85 @@ class MainWindow(QMainWindow):
         )
 
     def on_custom_scan(self):
-        # reset & kickoff the progress animation
-        self.progress.reset()
-        self.progress.start(interval=100)   # 100 ms steps
-        start(False)
+        print("Custom scan button clicked")
+        PATH = start(self)
+        return PATH
+    
+    
+    def choice(self, filename,PATH):
+        """Handle the user's choice."""
+        choice = QMessageBox.question(
+            self,
+            "Potentially harmful file found",
+            f"File {filename} detected. Quarantine?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+        print(PATH, "PATH")
+        if choice == QMessageBox.StandardButton.Yes:
+            print("File quarantined: ", filename)
+            value = True
+            quarantine(filename,value,PATH)
+        else:
+            print("File ignored: ", filename)
+            value = False
+            log_data(filename,value,verdict="malware")    
 
+    def open_settings(self):
+        dlg = SettingsDialog(self)
+        if dlg.exec() == QDialog.DialogCode.Accepted:
+            # User hit OK → read out the values:
+            chosen_model = dlg.model_combo.currentText()
+            param_a      = dlg.slider1.value()
+            param_b      = dlg.slider2.value()
+            print("New settings:", chosen_model, param_a, param_b)
+        else:
+            print("Settings cancelled")
+
+
+
+class SettingsDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("Settings")
+        self.setModal(True)
+        self.resize(300, 200)
+
+        form = QFormLayout()
+
+        # Model Dropdown menu
+        self.model_combo = QComboBox()
+        self.model_combo.addItems([
+            "Fast",
+            "Thorough",
+        ])
+        form.addRow("AI model:", self.model_combo)
+
+        # Slider 1
+        self.slider1 = QSlider(Qt.Orientation.Horizontal)
+        self.slider1.setRange(0, 100)
+        self.slider1.setValue(50)
+        form.addRow("Parameter 1:", self.slider1)
+
+        # Slider 2
+        self.slider2 = QSlider(Qt.Orientation.Horizontal)
+        self.slider2.setRange(0, 10)
+        self.slider2.setValue(5)
+        form.addRow("Parameter 2:", self.slider2)
+
+        # --- OK / Cancel ---
+        buttons = QDialogButtonBox(
+            QDialogButtonBox.StandardButton.Ok |
+            QDialogButtonBox.StandardButton.Cancel,
+            Qt.Orientation.Horizontal, self
+        )
+        buttons.accepted.connect(self.accept)
+        buttons.rejected.connect(self.reject)
+
+        # Layout
+        lay = QVBoxLayout(self)
+        lay.addLayout(form)
+        lay.addWidget(buttons)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
