@@ -1,8 +1,9 @@
-from qurantine import start, quarantine, log_data
+from qurantine import ScanWorker
+from file_handler import quarantine, log_data
 import sys
 from pathlib import Path
 from functools import partial    
-
+import os
 from PyQt6 import QtCore
 from PyQt6.QtCore import QSize, Qt, QRect, QTimer
 from PyQt6.QtGui import QPainter, QPen, QColor, QFont, QIcon, QCursor
@@ -11,6 +12,9 @@ from PyQt6.QtWidgets import (
     QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog, QDialog, QFormLayout, QComboBox, QSlider, QDialogButtonBox    
 )
 
+base_dir = os.path.dirname(os.path.abspath(__file__))
+relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  
+chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
 
 class CircularProgressBar(QWidget):
     def __init__(self, parent=None):
@@ -70,6 +74,9 @@ class MainWindow(QMainWindow):
         base_dir = Path(__file__).parent
         icons_dir = base_dir / "Icons"
 
+        base_dir2 = os.path.dirname(os.path.abspath(__file__))
+        relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  # goes one dir up, then into somefolder
+        self.chosen_model = os.path.abspath(os.path.join(base_dir2, relative_path))
         # === root layout ===
         root = QWidget()
         self.setCentralWidget(root)
@@ -211,7 +218,6 @@ class MainWindow(QMainWindow):
 
         main_h.addLayout(main_v)
 
-
     def scan(self, mode):
         """Stub handler for Full / Quick scan."""
         QMessageBox.information(
@@ -222,8 +228,28 @@ class MainWindow(QMainWindow):
 
     def on_custom_scan(self):
         print("Custom scan button clicked")
-        PATH = start(self)
-        return PATH
+        print(f"Using model: {self.chosen_model}")
+        tærskel = 80  # Default value eller whatever
+        brug_taerskel = False 
+        if tærskel is None:  # Handle case where settings dialog is canceled
+            return
+        # Pass tærskel and brug_taerskel to ScanWorker
+        self.scan_worker = ScanWorker(self, self.chosen_model, tærskel, brug_taerskel)
+        self.scan_worker.progress.connect(self.update_status)
+        self.scan_worker.finished.connect(self.scan_finished)
+        self.scan_worker.start()
+
+
+    def update_status(self, message):
+        """Update the UI with the current scan progress."""
+        print(message)  # Print progress to the console
+        # Optionally, update a label or progress bar in the UI
+        self.statusBar().showMessage(message)
+
+    def scan_finished(self):
+        """Handle the completion of the scan."""
+        print("Scan complete!")
+        self.statusBar().showMessage("Scan complete!")
     
     
     def choice(self, filename,PATH):
@@ -246,40 +272,66 @@ class MainWindow(QMainWindow):
             log_data(filename,value,verdict="malware")    
 
     def open_settings(self):
-        dlg = SettingsDialog(self)
+        print("Settings button clicked")
+        tærskel = 80  # Default value eller whatever
+        dlg = SettingsDialog(self, tærskel)
         if dlg.exec() == QDialog.DialogCode.Accepted:
-            # User hit OK → read out the values:
-            chosen_model = dlg.model_combo.currentText()
-            param_a      = dlg.slider1.value()
-            param_b      = dlg.slider2.value()
-            print("New settings:", chosen_model, param_a, param_b)
+            self.chosen_model = dlg.model_combo.currentText()
+            tærskel = dlg.slider1.value()
+            param_b = dlg.slider2.value()
+            brug_taerskel = dlg.brug_taerskel
+            print("New settings:", self.chosen_model, tærskel, param_b, brug_taerskel)
+            
+            base_dir = os.path.dirname(os.path.abspath(__file__))
+            relative_path = rf"Models\{self.chosen_model}"
+            self.chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
+            print("Chosen model path:", self.chosen_model)
+            
+            return tærskel, brug_taerskel  # <-- RETURN begge værdier
         else:
             print("Settings cancelled")
+            return None, None  # Hvis lukket/cancel
+
 
 
 
 class SettingsDialog(QDialog):
-    def __init__(self, parent=None):
+    def __init__(self, parent=None, tærskel=50):  # Default value for tærskel
         super().__init__(parent)
         self.setWindowTitle("Settings")
         self.setModal(True)
         self.resize(300, 200)
 
-        form = QFormLayout()
+        self.tærskel = tærskel  # Store tærskel as an instance attribute
 
+        form = QFormLayout()
         # Model Dropdown menu
         self.model_combo = QComboBox()
-        self.model_combo.addItems([
-            "Fast",
-            "Thorough",
-        ])
-        form.addRow("AI model:", self.model_combo)
+        specific_path = Path(__file__).parent / "Models"
 
+        # Add folder names to the combo box
+        if specific_path.exists() and specific_path.is_dir():
+            folder_names = [folder.name for folder in specific_path.iterdir() if folder.is_dir()]
+            self.model_combo.addItems(folder_names)
+        else:
+            self.model_combo.addItems(["Fast", "Thorough"])
+
+        # Set the current model as the default selection
+        if parent and hasattr(parent, "chosen_model"):
+            current_model = Path(parent.chosen_model).name
+            index = self.model_combo.findText(current_model)
+            if index >= 0:
+                self.model_combo.setCurrentIndex(index)
+
+        form.addRow("AI model:", self.model_combo)
         # Slider 1
         self.slider1 = QSlider(Qt.Orientation.Horizontal)
         self.slider1.setRange(0, 100)
-        self.slider1.setValue(50)
-        form.addRow("Parameter 1:", self.slider1)
+        self.slider1.setValue(self.tærskel)  # Use the passed tærskel value
+        # Indsæt efter self.slider1 definitionen
+        self.slider1_label = QLabel(f"Tærskel: {self.tærskel}")
+        self.slider1.valueChanged.connect(self.update_slider1_label)
+        form.addRow(self.slider1_label, self.slider1)
 
         # Slider 2
         self.slider2 = QSlider(Qt.Orientation.Horizontal)
@@ -287,6 +339,13 @@ class SettingsDialog(QDialog):
         self.slider2.setValue(5)
         form.addRow("Parameter 2:", self.slider2)
 
+        # BrugTærskel toggle
+        self.brug_taerskel = False  # Default value
+        self.toggle_button = QPushButton("Brug Tærskel: OFF")
+        self.toggle_button.setCheckable(True)
+        self.toggle_button.clicked.connect(self.toggle_brug_taerskel)
+        form.addRow("Brug Tærskel:", self.toggle_button)
+ 
         # --- OK / Cancel ---
         buttons = QDialogButtonBox(
             QDialogButtonBox.StandardButton.Ok |
@@ -300,6 +359,17 @@ class SettingsDialog(QDialog):
         lay = QVBoxLayout(self)
         lay.addLayout(form)
         lay.addWidget(buttons)
+
+    def update_slider1_label(self, value):
+        self.slider1_label.setText(f"Tærskel: {value}")
+        
+    def toggle_brug_taerskel(self):
+        self.brug_taerskel = self.toggle_button.isChecked()
+        if self.brug_taerskel:
+            self.toggle_button.setText("Brug Tærskel: ON")
+        else:
+            self.toggle_button.setText("Brug Tærskel: OFF")
+            self.slider1.setValue(0) # Reset slider to 0 when toggled
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

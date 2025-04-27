@@ -1,72 +1,70 @@
+# scanner.py
 import os
 import json
-import time
-from PyQt6.QtWidgets import ( QFileDialog    
-)
+from pathlib import Path
+from PyQt6.QtWidgets import QFileDialog
+from PyQt6.QtCore import QThread, pyqtSignal
+
 import model_runner as lm
+import file_handler 
 
+class ScanWorker(QThread):
+    progress = pyqtSignal(str)
+    finished = pyqtSignal()
 
-QUARANTINE_PATH = r'C:\Users\theco\OneDrive - NEXT Uddannelse København\Skrivebord\GYM\3.G\Teknikfag\Qurantine\Qurantine_Virus\package\QurantineFolder'
-LOG_FILE = 'log.json'
-json_data = {}
-processed_files = set() 
-EXTENTION  = ".exet"
-verdict = "clean"
+    def __init__(self, window, chosen_model, tærskel, brug_taerskel, parent=None):
+        super().__init__(parent)
+        self.window = window
+        self.chosen_model = chosen_model
+        self.tærskel = tærskel
+        self.brug_taerskel = brug_taerskel
 
-def quarantine(filename,value,PATH):
-        print("Quarantining file: ", filename)
-        try:
-            file_path = os.path.join(PATH, filename)
-            print(file_path)
-            if os.path.isfile(file_path):
-                base_name, _ = os.path.splitext(filename)
-            new_file_path = os.path.join(QUARANTINE_PATH, base_name + EXTENTION)
-            os.rename(file_path, new_file_path)
-            print(f"Renamed: {file_path} -> {new_file_path}")
-            log_data(filename,value,verdict="malware")
-        except Exception as e:
-            print(f"An error occurred: {e}")
+    def start(self):
+        PATH = QFileDialog.getExistingDirectory(
+            self.window,
+            "Select Folder to Scan",
+            ""
+        )
+        if not PATH:
+            self.finished.emit()
+            return
 
-def log_data(filename,value,verdict):
-            processed_files.add(filename) 
-            i = len(json_data) + 1
-            json_data[i] = {
-                "filename": filename,
-                "timestamp": time.ctime(time.time()),
-                "verdict": verdict,
-                "quarantined": value
-            }
-            print(json_data)
-            with open(LOG_FILE, 'r') as log_file:
-                logs = json.load(log_file)
-                logs.append(json_data[i])
-            with open(LOG_FILE, 'w') as log_file:
-                json.dump(logs, log_file, indent=4)
+        print("Starting scan...")
 
-def start(window):
-    PATH = QFileDialog.getExistingDirectory(
-        window,
-        "Select Folder to Scan",
-        ""
-    )
-    print("Starting scan...")
-    print(PATH)
-    if not os.path.exists(LOG_FILE):
-        with open(LOG_FILE, 'w') as log_file:
-            json.dump([], log_file)
+        if not os.path.exists(file_handler.LOG_FILE):
+            with open(file_handler.LOG_FILE, 'w') as log_file:
+                json.dump([], log_file)
 
-    for filename in os.listdir(PATH):
-        if filename.endswith(".exe") and filename not in processed_files:
-            print("New file detected: ", filename)
-            model_dir = r'C:\Users\theco\Downloads\[SVM] trained_models(2025-04-24 09-20-49)'
-            lm.init_model(model_dir)
-            file = os.path.join(PATH, filename)
-            is_malware, certainty, malware_certainty = lm.run_model(file)
-            print(f"Is malware: {is_malware}, Certainty: {certainty}, Malware Certainty: {malware_certainty}")  
-            if is_malware:
-                print("-\t File Evaluation: Malware")
-                from ui import MainWindow
-                MainWindow().choice(filename, PATH)
-            else:
-                print("-\t File Evaluation: Clean")
-                log_data(filename, False,verdict="clean")
+        base_dir = Path(__file__).parent
+        model_dir = base_dir / "Models" / self.chosen_model
+
+        for filename in os.listdir(PATH):
+            if filename.endswith(".exe") and filename not in file_handler.processed_files:
+                self.progress.emit(f"Scanning {filename}...")
+                print(f"Chosen model: {model_dir}")
+                lm.init_model(str(model_dir))
+                file_path = os.path.join(PATH, filename)
+                print("Using file:", file_path)
+                is_malware, certainty, malware_certainty = lm.run_model(file_path)
+                if self.brug_taerskel == True:
+                    if malware_certainty > self.tærskel:
+                        print("-\t File Evaluation: Malware (med tærskel)")
+                        print(f"-\t Certainty: {certainty} (med tærskel)")
+                        from ui import MainWindow
+                        MainWindow().choice(filename, PATH)
+                    else:
+                        print("-\t File Evaluation: Clean (med tærskel)")
+                        print(f"-\t Certainty: {certainty} (med tærskel)") 
+                        from file_handler import log_data
+                        log_data(filename, False,verdict="clean")
+                else:
+                    if is_malware:
+                        print("-\t File Evaluation: Malware")
+                        from ui import MainWindow
+                        MainWindow().choice(filename, PATH)
+                    else:
+                        print("-\t File Evaluation: Clean")
+                        from file_handler import log_data
+                        log_data(filename, False,verdict="clean")
+
+        self.finished.emit()
