@@ -69,11 +69,13 @@ class MainWindow(QMainWindow):
         super().__init__()
         self.setWindowTitle("Bit‑i‑Barrier")
         self.resize(1000, 600)
-
+        self.tærskel = 80
+        self.brug_taerskel = False  
         # === locate your Icons folder ===
         base_dir = Path(__file__).parent
-        icons_dir = base_dir / "Icons"
-
+        icons_dir = base_dir / "Icons"                  
+        if not icons_dir.exists():  # check if the folder exists
+            raise FileNotFoundError(f"Icons folder not found in {base_dir}")    
         base_dir2 = os.path.dirname(os.path.abspath(__file__))
         relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  # goes one dir up, then into somefolder
         self.chosen_model = os.path.abspath(os.path.join(base_dir2, relative_path))
@@ -184,7 +186,7 @@ class MainWindow(QMainWindow):
             )
             
             if text == "Custom scan":
-                btn.clicked.connect(self.on_custom_scan)
+                btn.clicked.connect(self.on_custom_scan)  
             else:
                 btn.clicked.connect(partial(self.scan, mode=text))
             
@@ -226,20 +228,6 @@ class MainWindow(QMainWindow):
             f"{mode} scan started!"
         )
 
-    def on_custom_scan(self):
-        print("Custom scan button clicked")
-        print(f"Using model: {self.chosen_model}")
-        tærskel = 80  # Default value eller whatever
-        brug_taerskel = False 
-        if tærskel is None:  # Handle case where settings dialog is canceled
-            return
-        # Pass tærskel and brug_taerskel to ScanWorker
-        self.scan_worker = ScanWorker(self, self.chosen_model, tærskel, brug_taerskel)
-        self.scan_worker.progress.connect(self.update_status)
-        self.scan_worker.finished.connect(self.scan_finished)
-        self.scan_worker.start()
-
-
     def update_status(self, message):
         """Update the UI with the current scan progress."""
         print(message)  # Print progress to the console
@@ -273,27 +261,27 @@ class MainWindow(QMainWindow):
 
     def open_settings(self):
         print("Settings button clicked")
-        tærskel = 80  # Default value eller whatever
-        dlg = SettingsDialog(self, tærskel)
+        dlg = SettingsDialog(self, self.tærskel)
         if dlg.exec() == QDialog.DialogCode.Accepted:
             self.chosen_model = dlg.model_combo.currentText()
-            tærskel = dlg.slider1.value()
+            self.tærskel = dlg.slider1.value()
             param_b = dlg.slider2.value()
-            brug_taerskel = dlg.brug_taerskel
-            print("New settings:", self.chosen_model, tærskel, param_b, brug_taerskel)
-            
+            self.brug_taerskel = dlg.brug_taerskel
+            print("New settings:", self.chosen_model, self.tærskel, param_b, self.brug_taerskel)
             base_dir = os.path.dirname(os.path.abspath(__file__))
             relative_path = rf"Models\{self.chosen_model}"
             self.chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
             print("Chosen model path:", self.chosen_model)
-            
-            return tærskel, brug_taerskel  # <-- RETURN begge værdier
         else:
             print("Settings cancelled")
-            return None, None  # Hvis lukket/cancel
 
-
-
+    def on_custom_scan(self):
+        print("Custom scan button clicked")
+        print(f"Using model: {self.chosen_model}")
+        self.scan_worker = ScanWorker(self, self.chosen_model, self.tærskel, self.brug_taerskel)
+        self.scan_worker.progress.connect(self.update_status)
+        self.scan_worker.finished.connect(self.scan_finished)
+        self.scan_worker.start()
 
 class SettingsDialog(QDialog):
     def __init__(self, parent=None, tærskel=50):  # Default value for tærskel
