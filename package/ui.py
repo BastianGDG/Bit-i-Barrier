@@ -7,10 +7,12 @@ import os
 from PyQt6 import QtCore
 from PyQt6.QtCore import QSize, Qt, QRect, QTimer
 from PyQt6.QtGui import QPainter, QPen, QColor, QFont, QIcon, QCursor
+from PyQt6.QtGui import QFontDatabase
 from PyQt6.QtWidgets import (
     QApplication, QMainWindow, QWidget, QHBoxLayout, QVBoxLayout,
-    QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog, QDialog, QFormLayout, QComboBox, QSlider, QDialogButtonBox    
+    QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog, QDialog, QFormLayout, QComboBox, QSlider, QDialogButtonBox, QTableWidget, QTableWidgetItem   
 )
+import json
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
 relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  
@@ -71,6 +73,7 @@ class MainWindow(QMainWindow):
         self.resize(1000, 600)
         self.tærskel = 80
         self.brug_taerskel = False  
+        
         # === locate your Icons folder ===
         base_dir = Path(__file__).parent
         icons_dir = base_dir / "Icons"                  
@@ -94,13 +97,17 @@ class MainWindow(QMainWindow):
         sb_v.setAlignment(Qt.AlignmentFlag.AlignTop)
         sb_v.setContentsMargins(10, 20, 10, 20)
 
-        for name in ("radar", "stats", "history"):
+        for name in ("radar", "stats"):
             btn = QToolButton()
             path = icons_dir / f"{name}.svg"
             btn.setIcon(QIcon(str(path)))
             btn.setIconSize(QSize(48,48))
             sb_v.addWidget(btn)
 
+        history = QToolButton()
+        history.setIcon(QIcon(str(icons_dir / "history.svg")))
+        history.setIconSize(QSize(48,48))
+        sb_v.addWidget(history)
         sb_v.addStretch()
 
         # notification bell
@@ -127,22 +134,32 @@ class MainWindow(QMainWindow):
 
         main_h.addWidget(sidebar)
         gear.clicked.connect(self.open_settings)
+        history.clicked.connect(self.open_History)
         main_v = QVBoxLayout()
         main_v.setContentsMargins(0,0,0,0)
-
+        fonts_dir = Path(__file__).parent / "Fonts"
+        if not fonts_dir.exists():
+            raise FileNotFoundError(f"Fonts folder not found in {fonts_dir}")        
+        for font_file in fonts_dir.glob("*.ttf"):
+            if QFontDatabase.addApplicationFont(str(font_file)) == -1:
+                print(f"Failed to load font: {font_file}")
         # header
         header = QFrame()
         header.setFixedHeight(100)
         header.setStyleSheet("background-color: #0E8B3B;")
         hdr_h = QHBoxLayout(header)
         hdr_h.setContentsMargins(20,0,0,0)
-        lbl_status = QLabel(
-            "You are safe\n"
-            "All shields active\n"
+        lbl_status = QLabel()
+        lbl_status.setStyleSheet("color:white;")
+        font_id = QFontDatabase.addApplicationFont("Fonts\Lexend_Exa\LexendExa-VariableFont_wght.ttf")
+        font_family = QFontDatabase.applicationFontFamilies(font_id)[0]
+        font = QFont(font_family, 16)
+        lbl_status.setFont(font)
+        lbl_status.setText(
+            "<b>You are safe</b><br>"
+            "All shields active<br>"
             "AI is up to date"
         )
-        lbl_status.setStyleSheet("color:white;")
-        lbl_status.setFont(QFont("Arial", 16, QFont.Weight.DemiBold))
         hdr_h.addWidget(lbl_status)
         main_v.addWidget(header)
 
@@ -156,7 +173,6 @@ class MainWindow(QMainWindow):
         btn_v = QVBoxLayout(btn_frame)
         btn_v.setContentsMargins(50,50,50,50)
         btn_v.setSpacing(30)
-
         for text, icon in [
             ("Full scan", "drive"),
             ("Custom scan", "file"),
@@ -165,6 +181,7 @@ class MainWindow(QMainWindow):
             btn = QPushButton(text)
             btn.setIcon(QIcon(str(icons_dir / f"{icon}.svg")))
             btn.setIconSize(QSize(24,24))
+            btn.setFont(font)
             btn.setMinimumHeight(60)
             btn.setStyleSheet("""
                 QPushButton {
@@ -202,18 +219,19 @@ class MainWindow(QMainWindow):
         prog_v = QVBoxLayout(prog_frame)
         prog_v.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        # store it as an instance attribute so on_custom_scan can see it:
         self.progress = CircularProgressBar()
         self.progress.setFixedSize(300,300)
         prog_v.addWidget(self.progress)
-        lbl_file = QLabel(
-            "Now scanning GrænseværdiLog_kontinuitet.pdf…\n"
-            "File 32403/56705"
+
+        # Create label as instance variable directly
+        self.lbl_file = QLabel(
+            "Ready to scan...\n"
+            "No files are processing right now",
         )
-        lbl_file.setFont(QFont("Arial", 12))
-        lbl_file.setStyleSheet("color: #EEE;")
-        lbl_file.setAlignment(Qt.AlignmentFlag.AlignCenter)
-        prog_v.addWidget(lbl_file)
+        self.lbl_file.setFont(QFont("Arial", 12))
+        self.lbl_file.setStyleSheet("color: #EEE;")
+        self.lbl_file.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        prog_v.addWidget(self.lbl_file)
 
         split.addWidget(prog_frame, 2)
         main_v.addLayout(split)
@@ -239,26 +257,6 @@ class MainWindow(QMainWindow):
         print("Scan complete!")
         self.statusBar().showMessage("Scan complete!")
     
-    
-    def choice(self, filename,PATH):
-        """Handle the user's choice."""
-        choice = QMessageBox.question(
-            self,
-            "Potentially harmful file found",
-            f"File {filename} detected. Quarantine?",
-            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
-            QMessageBox.StandardButton.No
-        )
-        print(PATH, "PATH")
-        if choice == QMessageBox.StandardButton.Yes:
-            print("File quarantined: ", filename)
-            value = True
-            quarantine(filename,value,PATH)
-        else:
-            print("File ignored: ", filename)
-            value = False
-            log_data(filename,value,verdict="malware")    
-
     def open_settings(self):
         print("Settings button clicked")
         dlg = SettingsDialog(self, self.tærskel)
@@ -278,10 +276,54 @@ class MainWindow(QMainWindow):
     def on_custom_scan(self):
         print("Custom scan button clicked")
         print(f"Using model: {self.chosen_model}")
+        
+        # Create the scan worker
         self.scan_worker = ScanWorker(self, self.chosen_model, self.tærskel, self.brug_taerskel)
+        
+        # Get the path first
+        PATH = QFileDialog.getExistingDirectory(
+            self,
+            "Select Folder to Scan",
+            ""
+        )
+        if not PATH:
+            return
+            
+        # Set up connections
         self.scan_worker.progress.connect(self.update_status)
         self.scan_worker.finished.connect(self.scan_finished)
-        self.scan_worker.start()
+        self.scan_worker.choice_needed.connect(self.choice)
+        self.scan_worker.file_scanning.connect(self.update_current_file)
+        # Set the path and start the thread
+        self.scan_worker.set_path(PATH)
+        self.scan_worker.start()  # This now calls run() internally
+
+    def update_current_file(self, filename):
+        """Update the label showing current file being scanned"""
+        self.lbl_file.setText(f"Now scanning {filename}...")
+
+    def open_History(self):
+        dlg = HistoryDialog(self)
+        dlg.exec()
+
+    def choice(self, filename,PATH):
+        """Handle the user's choice."""
+        choice = QMessageBox.question(
+            self,
+            "Potentially harmful file found",
+            f"File {filename} detected. Quarantine?",
+            QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No,
+            QMessageBox.StandardButton.No
+        )
+        print(PATH, "PATH")
+        if choice == QMessageBox.StandardButton.Yes:
+            print("File quarantined: ", filename)
+            value = True
+            quarantine(filename,value,PATH)
+        else:
+            print("File ignored: ", filename)
+            value = False
+            log_data(filename,value,verdict="malware")    
 
 class SettingsDialog(QDialog):
     def __init__(self, parent=None, tærskel=50):  # Default value for tærskel
@@ -358,6 +400,38 @@ class SettingsDialog(QDialog):
         else:
             self.toggle_button.setText("Brug Tærskel: OFF")
             self.slider1.setValue(0) # Reset slider to 0 when toggled
+class HistoryDialog(QDialog):
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setWindowTitle("History")
+        self.setModal(True)
+        self.resize(490, 160)
+
+        # Load json file
+        with open("log.json", "r", encoding="utf-8") as f:
+            data = json.load(f)
+        print(data)
+
+        # Create table with 3 columns
+        table = QTableWidget(len(data), 4, self)
+        table.setHorizontalHeaderLabels(["Filename", "Timestamp", "Verdict","Quarantined"])
+        table.setColumnWidth(0,150)
+        table.setColumnWidth(1,150)
+        table.setColumnWidth(2,70)
+        table.verticalHeader().setVisible(False)
+        table.setEditTriggers(QTableWidget.EditTrigger.NoEditTriggers)
+
+        # Fill table
+        for row, entry in enumerate(data):
+            table.setItem(row, 0, QTableWidgetItem(entry["filename"]))
+            table.setItem(row, 1, QTableWidgetItem(entry["timestamp"]))
+            table.setItem(row, 2, QTableWidgetItem(entry["verdict"]))
+            yesno = "Yes" if entry["quarantined"] else "No"
+            table.setItem(row, 3, QTableWidgetItem(yesno))
+
+        # Layout
+        lay = QVBoxLayout(self)
+        lay.addWidget(table)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
