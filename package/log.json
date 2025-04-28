@@ -70,5 +70,2207 @@
         "timestamp": "Mon Apr 28 11:07:58 2025",
         "verdict": "malware",
         "quarantined": false
+    },
+    {
+        "filename": "GeoGebra.exe",
+        "timestamp": "Mon Apr 28 11:20:20 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "DiscordSetup.exe",
+        "timestamp": "Mon Apr 28 11:20:21 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "Peggle.exe",
+        "timestamp": "Mon Apr 28 11:20:29 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 11:20:30 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 11:21:03 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 11:21:11 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 11:21:14 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "SteamSetup.exe",
+        "timestamp": "Mon Apr 28 11:21:15 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 11:21:17 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 12:13:41 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 12:13:44 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\arch.exe",
+        "timestamp": "Mon Apr 28 12:13:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ash.exe",
+        "timestamp": "Mon Apr 28 12:14:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\awk.exe",
+        "timestamp": "Mon Apr 28 12:14:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\base32.exe",
+        "timestamp": "Mon Apr 28 12:14:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\base64.exe",
+        "timestamp": "Mon Apr 28 12:14:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\basename.exe",
+        "timestamp": "Mon Apr 28 12:14:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\bash.exe",
+        "timestamp": "Mon Apr 28 12:14:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\bc.exe",
+        "timestamp": "Mon Apr 28 12:14:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\bunzip2.exe",
+        "timestamp": "Mon Apr 28 12:14:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\bzcat.exe",
+        "timestamp": "Mon Apr 28 12:14:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\bzip2.exe",
+        "timestamp": "Mon Apr 28 12:14:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\c++.exe",
+        "timestamp": "Mon Apr 28 12:14:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\c89.exe",
+        "timestamp": "Mon Apr 28 12:14:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\c99.exe",
+        "timestamp": "Mon Apr 28 12:14:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cal.exe",
+        "timestamp": "Mon Apr 28 12:14:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cat.exe",
+        "timestamp": "Mon Apr 28 12:14:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cc.exe",
+        "timestamp": "Mon Apr 28 12:14:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\chattr.exe",
+        "timestamp": "Mon Apr 28 12:14:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\chmod.exe",
+        "timestamp": "Mon Apr 28 12:14:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cksum.exe",
+        "timestamp": "Mon Apr 28 12:14:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\clear.exe",
+        "timestamp": "Mon Apr 28 12:14:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cmp.exe",
+        "timestamp": "Mon Apr 28 12:14:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\comm.exe",
+        "timestamp": "Mon Apr 28 12:14:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cp.exe",
+        "timestamp": "Mon Apr 28 12:14:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cpio.exe",
+        "timestamp": "Mon Apr 28 12:14:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\crc32.exe",
+        "timestamp": "Mon Apr 28 12:14:08 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\cut.exe",
+        "timestamp": "Mon Apr 28 12:14:09 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\date.exe",
+        "timestamp": "Mon Apr 28 12:14:09 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\dc.exe",
+        "timestamp": "Mon Apr 28 12:14:10 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\dd.exe",
+        "timestamp": "Mon Apr 28 12:14:10 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\debugbreak.exe",
+        "timestamp": "Mon Apr 28 12:14:10 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\df.exe",
+        "timestamp": "Mon Apr 28 12:14:10 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\diff.exe",
+        "timestamp": "Mon Apr 28 12:14:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\dirname.exe",
+        "timestamp": "Mon Apr 28 12:14:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\dos2unix.exe",
+        "timestamp": "Mon Apr 28 12:14:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\du.exe",
+        "timestamp": "Mon Apr 28 12:14:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\echo.exe",
+        "timestamp": "Mon Apr 28 12:14:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ed.exe",
+        "timestamp": "Mon Apr 28 12:14:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\egrep.exe",
+        "timestamp": "Mon Apr 28 12:14:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\env.exe",
+        "timestamp": "Mon Apr 28 12:14:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\expand.exe",
+        "timestamp": "Mon Apr 28 12:14:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\expr.exe",
+        "timestamp": "Mon Apr 28 12:14:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\factor.exe",
+        "timestamp": "Mon Apr 28 12:14:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\false.exe",
+        "timestamp": "Mon Apr 28 12:14:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\fgrep.exe",
+        "timestamp": "Mon Apr 28 12:14:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\find.exe",
+        "timestamp": "Mon Apr 28 12:14:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\fold.exe",
+        "timestamp": "Mon Apr 28 12:14:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\free.exe",
+        "timestamp": "Mon Apr 28 12:14:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\fsync.exe",
+        "timestamp": "Mon Apr 28 12:14:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\getopt.exe",
+        "timestamp": "Mon Apr 28 12:14:23 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\grep.exe",
+        "timestamp": "Mon Apr 28 12:14:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\groups.exe",
+        "timestamp": "Mon Apr 28 12:14:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\gunzip.exe",
+        "timestamp": "Mon Apr 28 12:14:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\gzip.exe",
+        "timestamp": "Mon Apr 28 12:14:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\hd.exe",
+        "timestamp": "Mon Apr 28 12:14:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\head.exe",
+        "timestamp": "Mon Apr 28 12:14:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\hexdump.exe",
+        "timestamp": "Mon Apr 28 12:14:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\httpd.exe",
+        "timestamp": "Mon Apr 28 12:14:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\iconv.exe",
+        "timestamp": "Mon Apr 28 12:14:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\id.exe",
+        "timestamp": "Mon Apr 28 12:14:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\inotifyd.exe",
+        "timestamp": "Mon Apr 28 12:14:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\install.exe",
+        "timestamp": "Mon Apr 28 12:14:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ipcalc.exe",
+        "timestamp": "Mon Apr 28 12:14:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\jn.exe",
+        "timestamp": "Mon Apr 28 12:14:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\kill.exe",
+        "timestamp": "Mon Apr 28 12:14:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\killall.exe",
+        "timestamp": "Mon Apr 28 12:14:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lash.exe",
+        "timestamp": "Mon Apr 28 12:14:29 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\less.exe",
+        "timestamp": "Mon Apr 28 12:14:29 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ln.exe",
+        "timestamp": "Mon Apr 28 12:14:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\logname.exe",
+        "timestamp": "Mon Apr 28 12:14:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ls.exe",
+        "timestamp": "Mon Apr 28 12:14:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lsattr.exe",
+        "timestamp": "Mon Apr 28 12:14:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lzcat.exe",
+        "timestamp": "Mon Apr 28 12:14:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lzma.exe",
+        "timestamp": "Mon Apr 28 12:14:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lzop.exe",
+        "timestamp": "Mon Apr 28 12:14:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\lzopcat.exe",
+        "timestamp": "Mon Apr 28 12:14:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\md5sum.exe",
+        "timestamp": "Mon Apr 28 12:14:32 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\mingw32-make.exe",
+        "timestamp": "Mon Apr 28 12:14:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\mkdir.exe",
+        "timestamp": "Mon Apr 28 12:14:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\mktemp.exe",
+        "timestamp": "Mon Apr 28 12:14:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\mv.exe",
+        "timestamp": "Mon Apr 28 12:14:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\nc.exe",
+        "timestamp": "Mon Apr 28 12:14:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\nl.exe",
+        "timestamp": "Mon Apr 28 12:14:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\nproc.exe",
+        "timestamp": "Mon Apr 28 12:14:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\od.exe",
+        "timestamp": "Mon Apr 28 12:14:37 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\paste.exe",
+        "timestamp": "Mon Apr 28 12:14:37 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\patch.exe",
+        "timestamp": "Mon Apr 28 12:14:37 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\pgrep.exe",
+        "timestamp": "Mon Apr 28 12:14:38 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\pidof.exe",
+        "timestamp": "Mon Apr 28 12:14:38 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\pipe_progress.exe",
+        "timestamp": "Mon Apr 28 12:14:38 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\pkill.exe",
+        "timestamp": "Mon Apr 28 12:14:39 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\printenv.exe",
+        "timestamp": "Mon Apr 28 12:14:39 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\printf.exe",
+        "timestamp": "Mon Apr 28 12:14:39 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ps.exe",
+        "timestamp": "Mon Apr 28 12:14:39 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\pwd.exe",
+        "timestamp": "Mon Apr 28 12:14:40 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\readlink.exe",
+        "timestamp": "Mon Apr 28 12:14:41 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\realpath.exe",
+        "timestamp": "Mon Apr 28 12:14:41 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\reset.exe",
+        "timestamp": "Mon Apr 28 12:14:41 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\rev.exe",
+        "timestamp": "Mon Apr 28 12:14:41 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\rm.exe",
+        "timestamp": "Mon Apr 28 12:14:42 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\rmdir.exe",
+        "timestamp": "Mon Apr 28 12:14:42 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sed.exe",
+        "timestamp": "Mon Apr 28 12:14:42 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\seq.exe",
+        "timestamp": "Mon Apr 28 12:14:42 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sh.exe",
+        "timestamp": "Mon Apr 28 12:14:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sha1sum.exe",
+        "timestamp": "Mon Apr 28 12:14:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sha256sum.exe",
+        "timestamp": "Mon Apr 28 12:14:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sha3sum.exe",
+        "timestamp": "Mon Apr 28 12:14:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sha512sum.exe",
+        "timestamp": "Mon Apr 28 12:14:44 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\shred.exe",
+        "timestamp": "Mon Apr 28 12:14:44 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\shuf.exe",
+        "timestamp": "Mon Apr 28 12:14:44 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sleep.exe",
+        "timestamp": "Mon Apr 28 12:14:45 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sort.exe",
+        "timestamp": "Mon Apr 28 12:14:45 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\split.exe",
+        "timestamp": "Mon Apr 28 12:14:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ssl_client.exe",
+        "timestamp": "Mon Apr 28 12:14:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\stat.exe",
+        "timestamp": "Mon Apr 28 12:14:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\su.exe",
+        "timestamp": "Mon Apr 28 12:14:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sum.exe",
+        "timestamp": "Mon Apr 28 12:14:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\sync.exe",
+        "timestamp": "Mon Apr 28 12:14:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\tac.exe",
+        "timestamp": "Mon Apr 28 12:14:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\tail.exe",
+        "timestamp": "Mon Apr 28 12:14:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\tar.exe",
+        "timestamp": "Mon Apr 28 12:14:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\tee.exe",
+        "timestamp": "Mon Apr 28 12:14:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\test.exe",
+        "timestamp": "Mon Apr 28 12:14:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\time.exe",
+        "timestamp": "Mon Apr 28 12:14:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\timeout.exe",
+        "timestamp": "Mon Apr 28 12:14:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\touch.exe",
+        "timestamp": "Mon Apr 28 12:14:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\tr.exe",
+        "timestamp": "Mon Apr 28 12:14:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\true.exe",
+        "timestamp": "Mon Apr 28 12:14:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\truncate.exe",
+        "timestamp": "Mon Apr 28 12:14:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ts.exe",
+        "timestamp": "Mon Apr 28 12:14:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\ttysize.exe",
+        "timestamp": "Mon Apr 28 12:14:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uname.exe",
+        "timestamp": "Mon Apr 28 12:14:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uncompress.exe",
+        "timestamp": "Mon Apr 28 12:14:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unexpand.exe",
+        "timestamp": "Mon Apr 28 12:14:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uniq.exe",
+        "timestamp": "Mon Apr 28 12:14:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unix2dos.exe",
+        "timestamp": "Mon Apr 28 12:14:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unlzma.exe",
+        "timestamp": "Mon Apr 28 12:14:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unlzop.exe",
+        "timestamp": "Mon Apr 28 12:14:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unxz.exe",
+        "timestamp": "Mon Apr 28 12:14:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\unzip.exe",
+        "timestamp": "Mon Apr 28 12:14:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uptime.exe",
+        "timestamp": "Mon Apr 28 12:14:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\usleep.exe",
+        "timestamp": "Mon Apr 28 12:14:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uudecode.exe",
+        "timestamp": "Mon Apr 28 12:14:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\uuencode.exe",
+        "timestamp": "Mon Apr 28 12:14:55 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\vc++filt.exe",
+        "timestamp": "Mon Apr 28 12:14:55 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\watch.exe",
+        "timestamp": "Mon Apr 28 12:14:55 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\wc.exe",
+        "timestamp": "Mon Apr 28 12:14:55 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\wget.exe",
+        "timestamp": "Mon Apr 28 12:14:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\which.exe",
+        "timestamp": "Mon Apr 28 12:14:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\whoami.exe",
+        "timestamp": "Mon Apr 28 12:14:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\whois.exe",
+        "timestamp": "Mon Apr 28 12:14:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-addr2line.exe",
+        "timestamp": "Mon Apr 28 12:14:58 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-ar.exe",
+        "timestamp": "Mon Apr 28 12:14:58 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-as.exe",
+        "timestamp": "Mon Apr 28 12:14:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-c++filt.exe",
+        "timestamp": "Mon Apr 28 12:14:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-cpp.exe",
+        "timestamp": "Mon Apr 28 12:14:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-dlltool.exe",
+        "timestamp": "Mon Apr 28 12:14:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-dllwrap.exe",
+        "timestamp": "Mon Apr 28 12:15:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-elfedit.exe",
+        "timestamp": "Mon Apr 28 12:15:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-g++.exe",
+        "timestamp": "Mon Apr 28 12:15:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcc-ar.exe",
+        "timestamp": "Mon Apr 28 12:15:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcc-nm.exe",
+        "timestamp": "Mon Apr 28 12:15:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcc-ranlib.exe",
+        "timestamp": "Mon Apr 28 12:15:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcc.exe",
+        "timestamp": "Mon Apr 28 12:15:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcov-dump.exe",
+        "timestamp": "Mon Apr 28 12:15:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcov-tool.exe",
+        "timestamp": "Mon Apr 28 12:15:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gcov.exe",
+        "timestamp": "Mon Apr 28 12:15:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-gfortran.exe",
+        "timestamp": "Mon Apr 28 12:15:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-ld.exe",
+        "timestamp": "Mon Apr 28 12:15:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-nm.exe",
+        "timestamp": "Mon Apr 28 12:15:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-objcopy.exe",
+        "timestamp": "Mon Apr 28 12:15:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-objdump.exe",
+        "timestamp": "Mon Apr 28 12:15:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-pkg-config.exe",
+        "timestamp": "Mon Apr 28 12:15:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-ranlib.exe",
+        "timestamp": "Mon Apr 28 12:15:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-readelf.exe",
+        "timestamp": "Mon Apr 28 12:15:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-size.exe",
+        "timestamp": "Mon Apr 28 12:15:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-strings.exe",
+        "timestamp": "Mon Apr 28 12:15:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-strip.exe",
+        "timestamp": "Mon Apr 28 12:15:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-windmc.exe",
+        "timestamp": "Mon Apr 28 12:15:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\x86_64-w64-mingw32-windres.exe",
+        "timestamp": "Mon Apr 28 12:15:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\xargs.exe",
+        "timestamp": "Mon Apr 28 12:15:06 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\xz.exe",
+        "timestamp": "Mon Apr 28 12:15:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\xzcat.exe",
+        "timestamp": "Mon Apr 28 12:15:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\yes.exe",
+        "timestamp": "Mon Apr 28 12:15:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit\\bin\\zcat.exe",
+        "timestamp": "Mon Apr 28 12:15:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 12:30:11 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 12:30:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 12:30:12 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\SteamSetup.exe",
+        "timestamp": "Mon Apr 28 12:30:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 12:30:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 12:30:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.exe",
+        "timestamp": "Mon Apr 28 12:30:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x64.exe",
+        "timestamp": "Mon Apr 28 12:30:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x86.exe",
+        "timestamp": "Mon Apr 28 12:30:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 12:34:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\SteamSetup.exe",
+        "timestamp": "Mon Apr 28 12:34:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 12:34:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 12:34:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.exe",
+        "timestamp": "Mon Apr 28 12:34:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x64.exe",
+        "timestamp": "Mon Apr 28 12:34:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x86.exe",
+        "timestamp": "Mon Apr 28 12:34:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\oalinst.exe",
+        "timestamp": "Mon Apr 28 12:34:39 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dxwebsetup.exe",
+        "timestamp": "Mon Apr 28 12:34:40 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dotNetFx40_Full_setup.exe",
+        "timestamp": "Mon Apr 28 12:34:43 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 12:34:45 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 12:34:46 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 12:43:32 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 12:43:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 12:43:42 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\SteamSetup.exe",
+        "timestamp": "Mon Apr 28 12:43:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 12:43:43 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 12:43:44 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.exe",
+        "timestamp": "Mon Apr 28 12:43:45 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dotNetFx40_Full_setup.exe",
+        "timestamp": "Mon Apr 28 12:43:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dxwebsetup.exe",
+        "timestamp": "Mon Apr 28 12:43:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x64.exe",
+        "timestamp": "Mon Apr 28 12:43:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x86.exe",
+        "timestamp": "Mon Apr 28 12:43:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AggregatorHost.exe",
+        "timestamp": "Mon Apr 28 12:43:47 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\aitstatic.exe",
+        "timestamp": "Mon Apr 28 12:43:47 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\alg.exe",
+        "timestamp": "Mon Apr 28 12:43:47 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\amdfendrsr.exe",
+        "timestamp": "Mon Apr 28 12:43:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\amdlogum.exe",
+        "timestamp": "Mon Apr 28 12:43:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AppHostRegistrationVerifier.exe",
+        "timestamp": "Mon Apr 28 12:43:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ApplyTrustOffline.exe",
+        "timestamp": "Mon Apr 28 12:43:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ApproveChildRequest.exe",
+        "timestamp": "Mon Apr 28 12:43:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\appverif.exe",
+        "timestamp": "Mon Apr 28 12:43:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AtBroker.exe",
+        "timestamp": "Mon Apr 28 12:43:50 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\atieclxx.exe",
+        "timestamp": "Mon Apr 28 12:43:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\attrib.exe",
+        "timestamp": "Mon Apr 28 12:43:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\audiodg.exe",
+        "timestamp": "Mon Apr 28 12:43:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\autochk.exe",
+        "timestamp": "Mon Apr 28 12:43:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\autofstx.exe",
+        "timestamp": "Mon Apr 28 12:43:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AxInstUI.exe",
+        "timestamp": "Mon Apr 28 12:43:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bcdboot.exe",
+        "timestamp": "Mon Apr 28 12:43:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bcdedit.exe",
+        "timestamp": "Mon Apr 28 12:43:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\BdeUISrv.exe",
+        "timestamp": "Mon Apr 28 12:43:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bdeunlock.exe",
+        "timestamp": "Mon Apr 28 12:43:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\BioIso.exe",
+        "timestamp": "Mon Apr 28 12:43:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\browserexport.exe",
+        "timestamp": "Mon Apr 28 12:43:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bthudtask.exe",
+        "timestamp": "Mon Apr 28 12:43:55 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\certreq.exe",
+        "timestamp": "Mon Apr 28 12:43:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\certutil.exe",
+        "timestamp": "Mon Apr 28 12:43:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\charmap.exe",
+        "timestamp": "Mon Apr 28 12:43:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\chkdsk.exe",
+        "timestamp": "Mon Apr 28 12:43:57 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\chkntfs.exe",
+        "timestamp": "Mon Apr 28 12:43:57 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cipher.exe",
+        "timestamp": "Mon Apr 28 12:43:57 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cleanmgr.exe",
+        "timestamp": "Mon Apr 28 12:43:57 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\clinfo.exe",
+        "timestamp": "Mon Apr 28 12:43:58 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ClipUp.exe",
+        "timestamp": "Mon Apr 28 12:43:58 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cmdl32.exe",
+        "timestamp": "Mon Apr 28 12:43:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cmstp.exe",
+        "timestamp": "Mon Apr 28 12:43:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\comp.exe",
+        "timestamp": "Mon Apr 28 12:44:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\conhost.exe",
+        "timestamp": "Mon Apr 28 12:44:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\consent.exe",
+        "timestamp": "Mon Apr 28 12:44:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\convert.exe",
+        "timestamp": "Mon Apr 28 12:44:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\CredentialEnrollmentManager.exe",
+        "timestamp": "Mon Apr 28 12:44:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\CredentialUIBroker.exe",
+        "timestamp": "Mon Apr 28 12:44:01 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\credwiz.exe",
+        "timestamp": "Mon Apr 28 12:44:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cscript.exe",
+        "timestamp": "Mon Apr 28 12:44:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cttune.exe",
+        "timestamp": "Mon Apr 28 12:44:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cttunesvr.exe",
+        "timestamp": "Mon Apr 28 12:44:02 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\d3dconfig.exe",
+        "timestamp": "Mon Apr 28 12:44:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dasHost.exe",
+        "timestamp": "Mon Apr 28 12:44:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DataExchangeHost.exe",
+        "timestamp": "Mon Apr 28 12:44:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dccw.exe",
+        "timestamp": "Mon Apr 28 12:44:03 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ddodiag.exe",
+        "timestamp": "Mon Apr 28 12:44:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DeviceCensus.exe",
+        "timestamp": "Mon Apr 28 12:44:04 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DeviceEnroller.exe",
+        "timestamp": "Mon Apr 28 12:44:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DFDWiz.exe",
+        "timestamp": "Mon Apr 28 12:44:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dfrgui.exe",
+        "timestamp": "Mon Apr 28 12:44:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dgtrayicon.exe",
+        "timestamp": "Mon Apr 28 12:44:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 12:47:32 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 12:47:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 12:47:47 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\SteamSetup.exe",
+        "timestamp": "Mon Apr 28 12:47:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 12:47:48 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 12:47:49 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.exe",
+        "timestamp": "Mon Apr 28 12:47:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dotNetFx40_Full_setup.exe",
+        "timestamp": "Mon Apr 28 12:47:51 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dxwebsetup.exe",
+        "timestamp": "Mon Apr 28 12:47:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x64.exe",
+        "timestamp": "Mon Apr 28 12:47:52 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x86.exe",
+        "timestamp": "Mon Apr 28 12:47:53 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\oalinst.exe",
+        "timestamp": "Mon Apr 28 12:48:06 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AggregatorHost.exe",
+        "timestamp": "Mon Apr 28 12:48:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\aitstatic.exe",
+        "timestamp": "Mon Apr 28 12:48:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\alg.exe",
+        "timestamp": "Mon Apr 28 12:48:11 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\amdfendrsr.exe",
+        "timestamp": "Mon Apr 28 12:48:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\amdlogum.exe",
+        "timestamp": "Mon Apr 28 12:48:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AppHostRegistrationVerifier.exe",
+        "timestamp": "Mon Apr 28 12:48:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ApplyTrustOffline.exe",
+        "timestamp": "Mon Apr 28 12:48:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ApproveChildRequest.exe",
+        "timestamp": "Mon Apr 28 12:48:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\appverif.exe",
+        "timestamp": "Mon Apr 28 12:48:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AtBroker.exe",
+        "timestamp": "Mon Apr 28 12:48:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\atieclxx.exe",
+        "timestamp": "Mon Apr 28 12:48:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\attrib.exe",
+        "timestamp": "Mon Apr 28 12:48:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\audiodg.exe",
+        "timestamp": "Mon Apr 28 12:48:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\autochk.exe",
+        "timestamp": "Mon Apr 28 12:48:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\autofstx.exe",
+        "timestamp": "Mon Apr 28 12:48:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\AxInstUI.exe",
+        "timestamp": "Mon Apr 28 12:48:16 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bcdboot.exe",
+        "timestamp": "Mon Apr 28 12:48:17 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bcdedit.exe",
+        "timestamp": "Mon Apr 28 12:48:17 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\BdeUISrv.exe",
+        "timestamp": "Mon Apr 28 12:48:17 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bdeunlock.exe",
+        "timestamp": "Mon Apr 28 12:48:17 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\BioIso.exe",
+        "timestamp": "Mon Apr 28 12:48:17 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\browserexport.exe",
+        "timestamp": "Mon Apr 28 12:48:18 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\bthudtask.exe",
+        "timestamp": "Mon Apr 28 12:48:18 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\certreq.exe",
+        "timestamp": "Mon Apr 28 12:48:19 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\certutil.exe",
+        "timestamp": "Mon Apr 28 12:48:20 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\charmap.exe",
+        "timestamp": "Mon Apr 28 12:48:20 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\chkdsk.exe",
+        "timestamp": "Mon Apr 28 12:48:20 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\chkntfs.exe",
+        "timestamp": "Mon Apr 28 12:48:20 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cipher.exe",
+        "timestamp": "Mon Apr 28 12:48:21 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cleanmgr.exe",
+        "timestamp": "Mon Apr 28 12:48:21 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\clinfo.exe",
+        "timestamp": "Mon Apr 28 12:48:21 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ClipUp.exe",
+        "timestamp": "Mon Apr 28 12:48:22 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cmdl32.exe",
+        "timestamp": "Mon Apr 28 12:48:23 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cmstp.exe",
+        "timestamp": "Mon Apr 28 12:48:23 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\comp.exe",
+        "timestamp": "Mon Apr 28 12:48:23 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\conhost.exe",
+        "timestamp": "Mon Apr 28 12:48:24 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\consent.exe",
+        "timestamp": "Mon Apr 28 12:48:24 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\convert.exe",
+        "timestamp": "Mon Apr 28 12:48:24 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\CredentialEnrollmentManager.exe",
+        "timestamp": "Mon Apr 28 12:48:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\CredentialUIBroker.exe",
+        "timestamp": "Mon Apr 28 12:48:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\credwiz.exe",
+        "timestamp": "Mon Apr 28 12:48:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cscript.exe",
+        "timestamp": "Mon Apr 28 12:48:25 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cttune.exe",
+        "timestamp": "Mon Apr 28 12:48:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\cttunesvr.exe",
+        "timestamp": "Mon Apr 28 12:48:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\d3dconfig.exe",
+        "timestamp": "Mon Apr 28 12:48:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dasHost.exe",
+        "timestamp": "Mon Apr 28 12:48:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DataExchangeHost.exe",
+        "timestamp": "Mon Apr 28 12:48:26 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dccw.exe",
+        "timestamp": "Mon Apr 28 12:48:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\ddodiag.exe",
+        "timestamp": "Mon Apr 28 12:48:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DeviceCensus.exe",
+        "timestamp": "Mon Apr 28 12:48:27 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DeviceEnroller.exe",
+        "timestamp": "Mon Apr 28 12:48:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DFDWiz.exe",
+        "timestamp": "Mon Apr 28 12:48:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dfrgui.exe",
+        "timestamp": "Mon Apr 28 12:48:28 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dgtrayicon.exe",
+        "timestamp": "Mon Apr 28 12:48:29 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\directxdatabaseupdater.exe",
+        "timestamp": "Mon Apr 28 12:48:29 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\diskpart.exe",
+        "timestamp": "Mon Apr 28 12:48:29 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\Dism.exe",
+        "timestamp": "Mon Apr 28 12:48:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dispdiag.exe",
+        "timestamp": "Mon Apr 28 12:48:30 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\djoin.exe",
+        "timestamp": "Mon Apr 28 12:48:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dmcertinst.exe",
+        "timestamp": "Mon Apr 28 12:48:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dmclient.exe",
+        "timestamp": "Mon Apr 28 12:48:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\doskey.exe",
+        "timestamp": "Mon Apr 28 12:48:32 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dpapimig.exe",
+        "timestamp": "Mon Apr 28 12:48:32 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\drvinst.exe",
+        "timestamp": "Mon Apr 28 12:48:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dsregcmd.exe",
+        "timestamp": "Mon Apr 28 12:48:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dwm.exe",
+        "timestamp": "Mon Apr 28 12:48:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DWWIN.EXE",
+        "timestamp": "Mon Apr 28 12:48:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\DXCap.exe",
+        "timestamp": "Mon Apr 28 12:48:34 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dxdiag.exe",
+        "timestamp": "Mon Apr 28 12:48:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\dxgiadaptercache.exe",
+        "timestamp": "Mon Apr 28 12:48:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\Dxpserver.exe",
+        "timestamp": "Mon Apr 28 12:48:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\EaseOfAccessDialog.exe",
+        "timestamp": "Mon Apr 28 12:48:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Windows\\System32\\easinvoker.exe",
+        "timestamp": "Mon Apr 28 12:48:35 2025",
+        "verdict": "clean",
+        "quarantined": false
     }
 ]

@@ -1,5 +1,7 @@
 from qurantine import ScanWorker
+from quickscan import QuickScanWorker
 from file_handler import quarantine, log_data
+from fullscan import FullScanWorker
 import sys
 from pathlib import Path
 from functools import partial    
@@ -13,9 +15,10 @@ from PyQt6.QtWidgets import (
     QFrame, QPushButton, QLabel, QToolButton, QMessageBox, QFileDialog, QDialog, QFormLayout, QComboBox, QSlider, QDialogButtonBox, QTableWidget, QTableWidgetItem   
 )
 import json
+from filesystem_scanner import find_exe_files, full_scan, quick_scan
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  
+relative_path = r"Models\[SVM] trained_models(2025-04-24 20-09-03)"  
 chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
 
 class CircularProgressBar(QWidget):
@@ -39,6 +42,11 @@ class CircularProgressBar(QWidget):
 
     def _advance(self):
         self._value = (self._value + 1) % 101
+        self.update()
+
+    def setValue(self, value):
+        """Set progress value (0-100)."""
+        self._value = min(100, max(0, value))
         self.update()
 
     def paintEvent(self, event):
@@ -204,8 +212,10 @@ class MainWindow(QMainWindow):
             
             if text == "Custom scan":
                 btn.clicked.connect(self.on_custom_scan)  
-            else:
-                btn.clicked.connect(partial(self.scan, mode=text))
+            elif text == "Quick scan":
+                btn.clicked.connect(self.on_quick_scan)
+            elif text == "Full scan":
+                btn.clicked.connect(self.on_full_scan)
             
             btn_v.addWidget(btn)
 
@@ -238,14 +248,6 @@ class MainWindow(QMainWindow):
 
         main_h.addLayout(main_v)
 
-    def scan(self, mode):
-        """Stub handler for Full / Quick scan."""
-        QMessageBox.information(
-            self,
-            f"{mode} Scan",
-            f"{mode} scan started!"
-        )
-
     def update_status(self, message):
         """Update the UI with the current scan progress."""
         print(message)  # Print progress to the console
@@ -256,10 +258,8 @@ class MainWindow(QMainWindow):
         """Handle the completion of the scan."""
         print("Scan complete!")
         self.statusBar().showMessage("Scan complete!")
-        # Update the label to show scan completion
         self.lbl_file.setText("Scan complete!\nAll files processed")
-        # Reset progress bar
-        self.progress.reset()
+        self.progress.setValue(100)  # Set to 100% when done
     
     def open_settings(self):
         print("Settings button clicked")
@@ -293,17 +293,75 @@ class MainWindow(QMainWindow):
         if not PATH:
             return
             
+        # Calculate total files before starting
+        total_files = len([f for f in os.listdir(PATH) if f.endswith(".exe")])
+        self.total_files = total_files
+        
         # Set up connections
         self.scan_worker.progress.connect(self.update_status)
         self.scan_worker.finished.connect(self.scan_finished)
         self.scan_worker.choice_needed.connect(self.choice)
         self.scan_worker.file_scanning.connect(self.update_current_file)
+        
+        # Reset progress bar at start
+        self.progress.setValue(0)
+        
         # Set the path and start the thread
         self.scan_worker.set_path(PATH)
-        self.scan_worker.start()  # This now calls run() internally
+        self.scan_worker.start()
+
+    def on_quick_scan(self):
+        print("Quick scan button clicked")
+        print(f"Quick model: {self.chosen_model}")
+        
+        # Create the scan worker
+        self.scan_worker = QuickScanWorker(self, self.chosen_model, self.tærskel, self.brug_taerskel)
+        
+            
+        # Calculate total files before starting
+        total_files = len(quick_scan())
+        self.total_files = total_files
+        
+        # Set up connections
+        self.scan_worker.progress.connect(self.update_status)
+        self.scan_worker.finished.connect(self.scan_finished)
+        self.scan_worker.choice_needed.connect(self.choice)
+        self.scan_worker.file_scanning.connect(self.update_current_file)
+        
+        # Reset progress bar at start
+        self.progress.setValue(0)
+        
+        self.scan_worker.start()
+
+    def on_full_scan(self):
+        print("Full scan button clicked")
+        print(f"Full model: {self.chosen_model}")
+        
+        # Create the scan worker
+        self.scan_worker = FullScanWorker(self, self.chosen_model, self.tærskel, self.brug_taerskel)
+        
+            
+        # Calculate total files before starting
+        total_files = len(full_scan())
+        self.total_files = total_files
+        
+        # Set up connections
+        self.scan_worker.progress.connect(self.update_status)
+        self.scan_worker.finished.connect(self.scan_finished)
+        self.scan_worker.choice_needed.connect(self.choice)
+        self.scan_worker.file_scanning.connect(self.update_current_file)
+        
+        # Reset progress bar at start
+        self.progress.setValue(0)
+        
+        self.scan_worker.start()
+
 
     def update_current_file(self, filename):
         """Update the label showing current file being scanned"""
+        current_file = int(filename.split('/')[0].split()[1])
+        progress = int((current_file / self.total_files) * 100)
+        self.progress.setValue(progress)
         self.lbl_file.setText(f"Now scanning {filename}...")
 
     def open_History(self):
