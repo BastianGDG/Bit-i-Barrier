@@ -1,0 +1,10 @@
+PyQt6
+pandas
+numpy
+scikit-learn
+pefile
+joblib
+matplotlib
+h5py
+pywin32
+Pillow

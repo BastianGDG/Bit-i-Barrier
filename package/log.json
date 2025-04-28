@@ -2272,5 +2272,77 @@
         "timestamp": "Mon Apr 28 12:48:35 2025",
         "verdict": "clean",
         "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\ChromeSetup.exe",
+        "timestamp": "Mon Apr 28 13:32:54 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Git-2.49.0-64-bit.exe",
+        "timestamp": "Mon Apr 28 13:32:57 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 13:33:07 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\SteamSetup.exe",
+        "timestamp": "Mon Apr 28 13:33:08 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\VisualStudioSetup.exe",
+        "timestamp": "Mon Apr 28 13:33:09 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\w64devkit-x64-2.1.0.exe",
+        "timestamp": "Mon Apr 28 13:33:10 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.exe",
+        "timestamp": "Mon Apr 28 13:33:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dotNetFx40_Full_setup.exe",
+        "timestamp": "Mon Apr 28 13:33:12 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\dxwebsetup.exe",
+        "timestamp": "Mon Apr 28 13:33:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x64.exe",
+        "timestamp": "Mon Apr 28 13:33:13 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\vcredist_x86.exe",
+        "timestamp": "Mon Apr 28 13:33:14 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\Balatro.v1.0.1m\\_Redist\\oalinst.exe",
+        "timestamp": "Mon Apr 28 13:33:19 2025",
+        "verdict": "malware",
+        "quarantined": false
     }
 ]

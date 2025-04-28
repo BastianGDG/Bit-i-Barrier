@@ -18,7 +18,7 @@ import json
 from filesystem_scanner import find_exe_files, full_scan, quick_scan
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-relative_path = r"Models\[SVM] trained_models(2025-04-24 20-09-03)"  
+relative_path = r'Models\[SVM] trained_models(2025-04-24 20-09-03)'  
 chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
 
 class CircularProgressBar(QWidget):
@@ -159,9 +159,14 @@ class MainWindow(QMainWindow):
         hdr_h.setContentsMargins(20,0,0,0)
         lbl_status = QLabel()
         lbl_status.setStyleSheet("color:white;")
-        font_id = QFontDatabase.addApplicationFont("Fonts\Lexend_Exa\LexendExa-VariableFont_wght.ttf")
-        font_family = QFontDatabase.applicationFontFamilies(font_id)[0]
-        font = QFont(font_family, 16)
+        font_id = QFontDatabase.addApplicationFont(str(fonts_dir / "Lexend_Exa" / "LexendExa-VariableFont_wght.ttf"))
+        families = QFontDatabase.applicationFontFamilies(font_id)
+        if font_id != -1 and families:
+            font_family = families[0]
+            font = QFont(font_family, 16)
+        else:
+            print("Failed to load LexendExa font, using default.")
+            font = QFont("Arial", 16)
         lbl_status.setFont(font)
         lbl_status.setText(
             "<b>You are safe</b><br>"
@@ -267,9 +272,8 @@ class MainWindow(QMainWindow):
         if dlg.exec() == QDialog.DialogCode.Accepted:
             self.chosen_model = dlg.model_combo.currentText()
             self.tærskel = dlg.slider1.value()
-            param_b = dlg.slider2.value()
             self.brug_taerskel = dlg.brug_taerskel
-            print("New settings:", self.chosen_model, self.tærskel, param_b, self.brug_taerskel)
+            print("New settings:", self.chosen_model, self.tærskel, self.brug_taerskel)
             base_dir = os.path.dirname(os.path.abspath(__file__))
             relative_path = rf"Models\{self.chosen_model}"
             self.chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
@@ -421,15 +425,9 @@ class SettingsDialog(QDialog):
         self.slider1.setRange(0, 100)
         self.slider1.setValue(self.tærskel)  # Use the passed tærskel value
         # Indsæt efter self.slider1 definitionen
-        self.slider1_label = QLabel(f"Tærskel: {self.tærskel}")
+        self.slider1_label = QLabel(f"Tærskel: {self.tærskel}%")
         self.slider1.valueChanged.connect(self.update_slider1_label)
         form.addRow(self.slider1_label, self.slider1)
-
-        # Slider 2
-        self.slider2 = QSlider(Qt.Orientation.Horizontal)
-        self.slider2.setRange(0, 10)
-        self.slider2.setValue(5)
-        form.addRow("Parameter 2:", self.slider2)
 
         # BrugTærskel toggle
         self.brug_taerskel = False  # Default value
@@ -453,7 +451,7 @@ class SettingsDialog(QDialog):
         lay.addWidget(buttons)
 
     def update_slider1_label(self, value):
-        self.slider1_label.setText(f"Tærskel: {value}")
+        self.slider1_label.setText(f"Tærskel: {value}%")
         
     def toggle_brug_taerskel(self):
         self.brug_taerskel = self.toggle_button.isChecked()

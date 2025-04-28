@@ -1,41 +1,95 @@
-# 🛡️ AI Antivirus
+<h1 align="center">🦠 Bit‑i‑Barrier: AI Antivirus</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9%2B-blue?logo=python" />
+  <img src="https://img.shields.io/badge/PyQt6-UI-green?logo=qt" />
+  <img src="https://img.shields.io/badge/AI-Driven-purple?logo=ai" />
+</p>
+<p align="center">
+  <b>Modern, AI-powered antivirus with a beautiful PyQt6 interface and real-time quarantine.</b>
+</p>
 
-An intelligent, self-learning antivirus solution trained on imported `.dll` files, equipped with a PyQt-powered interface and an automatic quarantine system.
+---
 
-## ⚙️ Features
+## ✨ Features
 
-- 🤖 **AI Detection** – Machine learning model trained to detect malicious DLLs with high accuracy.
-- 🔐 **Real-Time Scanning** – Monitors system activity and identifies suspicious DLL files.
-- 📦 **Quarantine System** – Automatically isolates infected files to prevent harm.
-- 🖥️ **PyQt GUI** – User-friendly interface for scanning, reviewing threats, and managing quarantine.
-- 🧠 **Continuous Learning** – Regularly updated with new data to improve detection accuracy.
+- 🤖 <b>AI Malware Detection</b>  
+  Trained models spot malicious files with high accuracy.
+- 🖥️ <b>Modern PyQt6 GUI</b>  
+  Sleek, responsive interface for scanning and management.
+- ⚡ <b>Real-Time & Custom Scans</b>  
+  Full, quick, and custom scan modes for flexibility.
+- 📦 <b>Automatic Quarantine</b>  
+  Instantly isolates threats to keep your system safe.
+- 📊 <b>Threat History & Logs</b>  
+  Review past scans and actions in a user-friendly log.
+- 🛠️ <b>Configurable AI Models</b>  
+  Easily switch between detection models in the settings.
+
+---
 
 ## 🖼️ UI Preview
 
-> *(Add a screenshot here of the main PyQt GUI window once available)*
+<p align="center">
+  <img src="docs/screenshot.png" alt="Bit‑i‑Barrier UI" width="600"/>
+</p>
 
-## 🧪 How It Works
-
-1. **Data Input** – Loads and analyzes DLL files using static features.
-2. **AI Model** – A custom-trained model classifies files as benign or malicious.
-3. **Quarantine** – If flagged, files are moved to a secure quarantine folder.
-4. **User Interface** – Lets users manually scan, manage quarantined files, and view logs.
+---
 
 ## 🚀 Getting Started
 
-### Requirements
+### Prerequisites
 
 - Python 3.9+
-- PyQt5
-- Scikit-learn / TensorFlow / (your ML lib)
-- Pandas, NumPy
-- `pefile` for parsing DLLs
-- Any other dependencies your model requires
+- PyQt6
+- scikit-learn / TensorFlow (your ML backend)
+- pandas, numpy
+- pefile
 
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/ai-antivirus.git
-cd ai-antivirus
+git clone https://github.com/yourusername/bit-i-barrier.git
+cd bit-i-barrier
 pip install -r requirements.txt
-python main.py
+python -m package.ui
+```
+
+---
+
+## 🧠 How It Works
+
+1. **Scan**: Select a folder or run a quick/full scan.
+2. **AI Analysis**: Files are analyzed by your chosen AI model.
+3. **Quarantine**: Detected threats are automatically isolated.
+4. **Review**: Manage quarantined files and review scan history.
+
+---
+
+## ⚙️ Project Structure
+
+```
+Qurantine_Virus/
+├── package/
+│   ├── ui.py           # Main PyQt6 GUI
+│   ├── qurantine.py    # Scan logic & threading
+│   ├── model_runner.py # AI model interface
+│   ├── file_handler.py # Quarantine & logging
+│   └── ...
+├── Models/             # Trained AI models
+├── Icons/              # App icons
+├── requirements.txt
+└── README.md
+```
+
+---
+
+## 🙌 Credits
+
+- Developed by [Your Name]
+- Inspired by modern antivirus solutions and AI research
+
+---
+
+<p align="center">
+  <b>Stay safe. Stay smart. Stay ahead with Bit‑i‑Barrier.</b>
+</p>
