@@ -22,5 +22,53 @@
         "timestamp": "Mon Apr 28 10:01:10 2025",
         "verdict": "clean",
         "quarantined": false
+    },
+    {
+        "filename": "GeoGebra.exe",
+        "timestamp": "Mon Apr 28 11:04:16 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "DiscordSetup.exe",
+        "timestamp": "Mon Apr 28 11:04:18 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "Peggle.exe",
+        "timestamp": "Mon Apr 28 11:04:26 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 11:04:27 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "msys2-x86_64-20250221.exe",
+        "timestamp": "Mon Apr 28 11:07:46 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "Peggle.exe",
+        "timestamp": "Mon Apr 28 11:07:56 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "GeoGebra.exe",
+        "timestamp": "Mon Apr 28 11:07:58 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "DiscordSetup.exe",
+        "timestamp": "Mon Apr 28 11:07:58 2025",
+        "verdict": "malware",
+        "quarantined": false
     }
 ]

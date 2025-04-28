@@ -43,9 +43,7 @@ class ScanWorker(QThread):
         for filename in os.listdir(self.PATH):
             if filename.endswith(".exe") and filename not in file_handler.processed_files:
                 processed += 1
-                self.progress.emit(f"Progress: {processed}/{total_files}")
-                self.file_scanning.emit(filename)  # E
-                self.progress.emit(f"Scanning {filename}...")
+                self.file_scanning.emit(f"File {processed}/{total_files}\n{filename}")
                 lm.init_model(str(model_dir))
                 file_path = os.path.join(self.PATH, filename)
                 is_malware, certainty, malware_certainty = lm.run_model(file_path)

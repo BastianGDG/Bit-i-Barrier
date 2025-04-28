@@ -228,7 +228,7 @@ class MainWindow(QMainWindow):
             "Ready to scan...\n"
             "No files are processing right now",
         )
-        self.lbl_file.setFont(QFont("Arial", 12))
+        self.lbl_file.setFont(QFont("Roboto", 12))
         self.lbl_file.setStyleSheet("color: #EEE;")
         self.lbl_file.setAlignment(Qt.AlignmentFlag.AlignCenter)
         prog_v.addWidget(self.lbl_file)
@@ -256,6 +256,10 @@ class MainWindow(QMainWindow):
         """Handle the completion of the scan."""
         print("Scan complete!")
         self.statusBar().showMessage("Scan complete!")
+        # Update the label to show scan completion
+        self.lbl_file.setText("Scan complete!\nAll files processed")
+        # Reset progress bar
+        self.progress.reset()
     
     def open_settings(self):
         print("Settings button clicked")
