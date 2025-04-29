@@ -48,7 +48,7 @@
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/bit-i-barrier.git
+git clone https://github.com/BastianGDG/bit-i-barrier.git
 cd bit-i-barrier
 pip install -r requirements.txt
 python -m package.ui
@@ -85,8 +85,7 @@ Qurantine_Virus/
 
 ## 🙌 Credits
 
-- Developed by [Your Name]
-- Inspired by modern antivirus solutions and AI research
+- Made by: [@BastianGDG](https://github.com/BastianGDG), [@06nicolaj](https://github.com/06nicolaj), [@RobinIsCoding](https://github.com/RobinIsCoding), and [@BertramAakjaer](https://github.com/BertramAakjaer)
 
 ---
 

@@ -1,4 +1,9 @@
-QurantineFolder/
-Target/
-test.py
+
+package/QurantineFolder/
+
+package/Target/
+
 __pycache__/
+*.pyc
+
+test.py
