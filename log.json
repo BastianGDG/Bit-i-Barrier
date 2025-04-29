@@ -1,1 +1,368 @@
-[]
+[
+    {
+        "filename": "C:\\Users\\nicol\\Downloads\\Anaconda3-2023.09-0-Windows-x86_64.exe",
+        "timestamp": "Tue Apr 29 14:16:10 2025",
+        "verdict": "malware",
+        "quarantined": true
+    },
+    {
+        "filename": "DiscordSetup.exe",
+        "timestamp": "Tue Apr 29 14:23:12 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "Peggle.exe",
+        "timestamp": "Tue Apr 29 14:23:20 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "msys2-x86_64-20250221.exe",
+        "timestamp": "Tue Apr 29 14:23:20 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "GeoGebra.exe",
+        "timestamp": "Tue Apr 29 14:30:55 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "DiscordSetup.exe",
+        "timestamp": "Tue Apr 29 14:30:56 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "msys2-x86_64-20250221.exe",
+        "timestamp": "Tue Apr 29 14:31:05 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "Peggle.exe",
+        "timestamp": "Tue Apr 29 14:31:07 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.exe",
+        "timestamp": "Tue Apr 29 15:04:39 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\imager_1.8.5.exe",
+        "timestamp": "Tue Apr 29 15:04:45 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\imyfone-lockwiper_setup.exe",
+        "timestamp": "Tue Apr 29 15:04:59 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\jdk-23_windows-x64_bin.exe",
+        "timestamp": "Tue Apr 29 15:04:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\love-11.5-win64.exe",
+        "timestamp": "Tue Apr 29 15:05:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\LuaForWindows_v5.1.5-52.exe",
+        "timestamp": "Tue Apr 29 15:05:07 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FACEITInstaller_64.exe",
+        "timestamp": "Tue Apr 29 15:05:07 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\DGEngSetup5611580.exe",
+        "timestamp": "Tue Apr 29 15:05:12 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\MullvadVPN-2025.5.exe",
+        "timestamp": "Tue Apr 29 15:05:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Thunderstore Mod Manager - Installer.exe",
+        "timestamp": "Tue Apr 29 15:05:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Voice.ai-Downloader.exe",
+        "timestamp": "Tue Apr 29 15:05:15 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\Target\\GeoGebra.exe",
+        "timestamp": "Tue Apr 29 15:05:23 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\Target\\DiscordSetup.exe",
+        "timestamp": "Tue Apr 29 15:05:24 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\QurantineFolder\\Steam.exet",
+        "timestamp": "Tue Apr 29 15:05:26 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\QurantineFolder\\ProtonVPN_win_v2.3.2.exet",
+        "timestamp": "Tue Apr 29 15:05:27 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\QurantineFolder\\ChromeSetup.exet",
+        "timestamp": "Tue Apr 29 15:05:29 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\wireguard-installer.exe",
+        "timestamp": "Tue Apr 29 15:05:30 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\Target\\msys2-x86_64-20250221.exe",
+        "timestamp": "Tue Apr 29 15:05:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Bit-i-Barrier-main\\Bit-i-Barrier-main\\package\\Target\\Peggle.exe",
+        "timestamp": "Tue Apr 29 15:05:31 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Clustertruck\\Clustertruck\\Clustertruck\\Clustertruck.exe",
+        "timestamp": "Tue Apr 29 15:05:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Clustertruck\\Clustertruck\\Clustertruck\\unins000.exe",
+        "timestamp": "Tue Apr 29 15:05:33 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Balatro.exe",
+        "timestamp": "Tue Apr 29 15:15:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\DGEngSetup5611580.exe",
+        "timestamp": "Tue Apr 29 15:16:04 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\imager_1.8.5.exe",
+        "timestamp": "Tue Apr 29 15:16:05 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FACEITInstaller_64.exe",
+        "timestamp": "Tue Apr 29 15:16:05 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\imyfone-lockwiper_setup.exe",
+        "timestamp": "Tue Apr 29 15:16:11 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\jdk-23_windows-x64_bin.exe",
+        "timestamp": "Tue Apr 29 15:16:19 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\love-11.5-win64.exe",
+        "timestamp": "Tue Apr 29 15:16:20 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\LuaForWindows_v5.1.5-52.exe",
+        "timestamp": "Tue Apr 29 15:16:27 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\MullvadVPN-2025.5.exe",
+        "timestamp": "Tue Apr 29 15:16:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Thunderstore Mod Manager - Installer.exe",
+        "timestamp": "Tue Apr 29 15:16:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Voice.ai-Downloader.exe",
+        "timestamp": "Tue Apr 29 15:16:35 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Clustertruck\\Clustertruck\\Clustertruck\\Clustertruck.exe",
+        "timestamp": "Tue Apr 29 15:16:37 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Clustertruck\\Clustertruck\\Clustertruck\\unins000.exe",
+        "timestamp": "Tue Apr 29 15:16:37 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Endacopia_Demo\\Endacopia\\Windows\\Config.exe",
+        "timestamp": "Tue Apr 29 15:16:40 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FurMark_2.2.0.1_win64\\FurMark_win64\\gpuz\\gpuz.exe",
+        "timestamp": "Tue Apr 29 15:16:50 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FurMark_2.2.0.1_win64\\FurMark_win64\\gpushark\\gpushark_x64.exe",
+        "timestamp": "Tue Apr 29 15:16:51 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FurMark_2.2.0.1_win64\\FurMark_win64\\cpuburner\\cpuburner.exe",
+        "timestamp": "Tue Apr 29 15:16:52 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FurMark_2.2.0.1_win64\\FurMark_win64\\FurMark_GUI.exe",
+        "timestamp": "Tue Apr 29 15:16:52 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\FurMark_2.2.0.1_win64\\FurMark_win64\\furmark.exe",
+        "timestamp": "Tue Apr 29 15:16:53 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Endacopia_Demo\\Endacopia\\Windows\\Endacopia.exe",
+        "timestamp": "Tue Apr 29 15:16:53 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\Games\\UncannyCatGolfPlaytest2\\UncannyCatGolfPlaytest2\\UncannyCatGolfPlaytest2.exe",
+        "timestamp": "Tue Apr 29 15:16:56 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\lua5.1.exe",
+        "timestamp": "Tue Apr 29 15:16:58 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\wlua5.1.exe",
+        "timestamp": "Tue Apr 29 15:16:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\utils\\iup\\iuplua51.exe",
+        "timestamp": "Tue Apr 29 15:16:59 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\luac5.1.exe",
+        "timestamp": "Tue Apr 29 15:17:00 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\utils\\iup\\iupview.exe",
+        "timestamp": "Tue Apr 29 15:17:00 2025",
+        "verdict": "clean",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\bin2c5.1.exe",
+        "timestamp": "Tue Apr 29 15:17:01 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\utils\\iup\\ledc.exe",
+        "timestamp": "Tue Apr 29 15:17:01 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\SciTE\\SciTE.exe",
+        "timestamp": "Tue Apr 29 15:17:03 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\files\\7z.exe",
+        "timestamp": "Tue Apr 29 15:17:03 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\vcredist_x86.exe",
+        "timestamp": "Tue Apr 29 15:17:04 2025",
+        "verdict": "malware",
+        "quarantined": false
+    },
+    {
+        "filename": "C:\\Users\\theco\\Downloads\\luaforwindows-master\\luaforwindows-master\\vcredist_x86.4053.exe",
+        "timestamp": "Tue Apr 29 15:17:04 2025",
+        "verdict": "malware",
+        "quarantined": false
+    }
+]

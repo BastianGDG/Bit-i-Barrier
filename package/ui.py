@@ -18,7 +18,7 @@ import json
 from filesystem_scanner import find_exe_files, full_scan, quick_scan
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-relative_path = r'Models\[SVM] trained_models(2025-04-24 20-09-03)'  
+relative_path = r'Models\[RandomForest] trained_models(2025-04-24 19-26-54)'  
 chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
 
 class CircularProgressBar(QWidget):
@@ -80,24 +80,26 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Bit‑i‑Barrier")
         self.resize(1000, 600)
         self.tærskel = 80
-        self.brug_taerskel = False  
+        self.brug_taerskel = False 
+        self.detected = False
+
         
-        # === locate your Icons folder ===
+        # Locate icons
         base_dir = Path(__file__).parent
         icons_dir = base_dir / "Icons"                  
         if not icons_dir.exists():  # check if the folder exists
             raise FileNotFoundError(f"Icons folder not found in {base_dir}")    
         base_dir2 = os.path.dirname(os.path.abspath(__file__))
-        relative_path = r"Models\[SVM] trained_models(2025-04-24 09-20-49)"  # goes one dir up, then into somefolder
+        relative_path = r"Models\[SVM] trained_models(2025-04-24 20-09-03)"
         self.chosen_model = os.path.abspath(os.path.join(base_dir2, relative_path))
-        # === root layout ===
+        #root layout
         root = QWidget()
         self.setCentralWidget(root)
         main_h = QHBoxLayout(root)
         main_h.setContentsMargins(0,0,0,0)
         main_h.setSpacing(0)
 
-        # --- Sidebar ---
+        # Sidebar
         sidebar = QFrame()
         sidebar.setFixedWidth(100)
         sidebar.setStyleSheet("background-color: #1A1334;")
@@ -105,23 +107,29 @@ class MainWindow(QMainWindow):
         sb_v.setAlignment(Qt.AlignmentFlag.AlignTop)
         sb_v.setContentsMargins(10, 20, 10, 20)
 
-        for name in ("radar", "stats"):
+        for name in ("Scan", "Stats"):
             btn = QToolButton()
             path = icons_dir / f"{name}.svg"
             btn.setIcon(QIcon(str(path)))
-            btn.setIconSize(QSize(48,48))
+            btn.setText(f"{name}")
+            btn.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+            btn.setIconSize(QSize(80,80))
             sb_v.addWidget(btn)
 
         history = QToolButton()
         history.setIcon(QIcon(str(icons_dir / "history.svg")))
-        history.setIconSize(QSize(48,48))
+        history.setText("History")
+        history.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        history.setIconSize(QSize(80,80))
         sb_v.addWidget(history)
         sb_v.addStretch()
 
         # notification bell
         bell = QToolButton()
         bell.setIcon(QIcon(str(icons_dir / "bell.svg")))
-        bell.setIconSize(QSize(36,36))
+        bell.setText("Notifications")
+        bell.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        bell.setIconSize(QSize(80,80))
         sb_v.addWidget(bell)
         # little red "1"
         badge = QLabel("1", sidebar)
@@ -130,13 +138,14 @@ class MainWindow(QMainWindow):
             "border-radius:8px; font-size:10px;"
         )
         badge.setFixedSize(16,16)
-        # position it over the bell icon
         badge.move(45, 480)
 
-        # settings gear
+        # settings button
         gear = QToolButton()
         gear.setIcon(QIcon(str(icons_dir / "gear.svg")))
-        gear.setIconSize(QSize(36,36))
+        gear.setText("Settings")
+        gear.setToolButtonStyle(Qt.ToolButtonStyle.ToolButtonTextUnderIcon)
+        gear.setIconSize(QSize(80,80))
         sb_v.addWidget(gear)
 
 
@@ -151,14 +160,17 @@ class MainWindow(QMainWindow):
         for font_file in fonts_dir.glob("*.ttf"):
             if QFontDatabase.addApplicationFont(str(font_file)) == -1:
                 print(f"Failed to load font: {font_file}")
-        # header
-        header = QFrame()
-        header.setFixedHeight(100)
-        header.setStyleSheet("background-color: #0E8B3B;")
-        hdr_h = QHBoxLayout(header)
+
+        # header   
+        scanresults = "unscanned"
+        headercolour, headerlabel1, headerlabel2 = self.Changeheader(scanresults)
+        self.header = QFrame()
+        self.header.setFixedHeight(100)
+        self.header.setStyleSheet(f"background-color: {headercolour};")
+        hdr_h = QHBoxLayout(self.header)
         hdr_h.setContentsMargins(20,0,0,0)
-        lbl_status = QLabel()
-        lbl_status.setStyleSheet("color:white;")
+        self.lbl_status = QLabel()
+        self.lbl_status.setStyleSheet("color:white;")
         font_id = QFontDatabase.addApplicationFont(str(fonts_dir / "Lexend_Exa" / "LexendExa-VariableFont_wght.ttf"))
         families = QFontDatabase.applicationFontFamilies(font_id)
         if font_id != -1 and families:
@@ -167,20 +179,18 @@ class MainWindow(QMainWindow):
         else:
             print("Failed to load LexendExa font, using default.")
             font = QFont("Arial", 16)
-        lbl_status.setFont(font)
-        lbl_status.setText(
-            "<b>You are safe</b><br>"
-            "All shields active<br>"
-            "AI is up to date"
+        self.lbl_status.setFont(font)
+        self.lbl_status.setText(
+            f"<b>{headerlabel1}</b><br>"
+            f"{headerlabel2}"
         )
-        hdr_h.addWidget(lbl_status)
-        main_v.addWidget(header)
+        hdr_h.addWidget(self.lbl_status)
+        main_v.addWidget(self.header)
 
-        # middle split: left buttons / right progress
+
         split = QHBoxLayout()
         split.setContentsMargins(0,0,0,0)
 
-        # left: scan buttons
         btn_frame = QFrame()
         btn_frame.setStyleSheet("background-color: #3E3F9E;")
         btn_v = QVBoxLayout(btn_frame)
@@ -228,7 +238,7 @@ class MainWindow(QMainWindow):
 
         split.addWidget(btn_frame, 1)
 
-        # right: progress
+
         prog_frame = QFrame()
         prog_frame.setStyleSheet("background-color: #B8C4FF;")
         prog_v = QVBoxLayout(prog_frame)
@@ -238,7 +248,7 @@ class MainWindow(QMainWindow):
         self.progress.setFixedSize(300,300)
         prog_v.addWidget(self.progress)
 
-        # Create label as instance variable directly
+
         self.lbl_file = QLabel(
             "Ready to scan...\n"
             "No files are processing right now",
@@ -256,7 +266,6 @@ class MainWindow(QMainWindow):
     def update_status(self, message):
         """Update the UI with the current scan progress."""
         print(message)  # Print progress to the console
-        # Optionally, update a label or progress bar in the UI
         self.statusBar().showMessage(message)
 
     def scan_finished(self):
@@ -265,6 +274,31 @@ class MainWindow(QMainWindow):
         self.statusBar().showMessage("Scan complete!")
         self.lbl_file.setText("Scan complete!\nAll files processed")
         self.progress.setValue(100)  # Set to 100% when done
+
+        if not self.detected:
+            col, l1, l2 = self.Changeheader("safe")
+            self.header.setStyleSheet(f"background-color: {col};")
+            self.lbl_status.setText(f"<b>{l1}</b><br>{l2}")
+
+    def Changeheader(self, result):
+        safecolour = "#0E8B3B"
+        unscannedcolour = "#ffcc00"
+        detectcolour = "#ff1919"
+        if result == "safe":
+            headercolour = safecolour
+            headerlabel1 = "You are safe"
+            headerlabel2 = "No malicious files detected"
+            return (headercolour, headerlabel1, headerlabel2)
+        elif result == "detected":
+            headercolour = detectcolour
+            headerlabel1 = "Malicious files detected"
+            headerlabel2 = "Action required agains quarantined files"
+            return (headercolour, headerlabel1, headerlabel2)
+        else:
+            headercolour = unscannedcolour
+            headerlabel1 = "Not scanned"
+            headerlabel2 = "scan now to secure your device"
+            return (headercolour, headerlabel1, headerlabel2)
     
     def open_settings(self):
         print("Settings button clicked")
@@ -368,6 +402,26 @@ class MainWindow(QMainWindow):
         self.progress.setValue(progress)
         self.lbl_file.setText(f"Now scanning {filename}...")
 
+    def Changeheader(self, result):
+        safecolour = "#0E8B3B"
+        unscannedcolour = "#ffcc00"
+        detectcolour = "#ff1919"
+        if result == "safe":
+            headercolour = safecolour
+            headerlabel1 = "You are safe"
+            headerlabel2 = "No malicious files detected"
+            return (headercolour, headerlabel1, headerlabel2)
+        elif result == "detected":
+            headercolour = detectcolour
+            headerlabel1 = "Malicious files detected"
+            headerlabel2 = "Action required agains quarantined files"
+            return (headercolour, headerlabel1, headerlabel2)
+        else:
+            headercolour = unscannedcolour
+            headerlabel1 = "Not scanned"
+            headerlabel2 = "scan now to secure your device"
+            return (headercolour, headerlabel1, headerlabel2)
+
     def open_History(self):
         dlg = HistoryDialog(self)
         dlg.exec()
@@ -386,6 +440,11 @@ class MainWindow(QMainWindow):
             print("File quarantined: ", filename)
             value = True
             quarantine(filename,value,PATH)
+            self.detected = True
+            headercolour, headerlabel1, headerlabel2 = self.Changeheader("detected")
+            self.header.setStyleSheet(f"background-color: {headercolour};")
+            self.lbl_status.setText(f"<b>{headerlabel1}</b><br>{headerlabel2}")
+
         else:
             print("File ignored: ", filename)
             value = False
@@ -436,7 +495,7 @@ class SettingsDialog(QDialog):
         self.toggle_button.clicked.connect(self.toggle_brug_taerskel)
         form.addRow("Brug Tærskel:", self.toggle_button)
  
-        # --- OK / Cancel ---
+        # OK / Cancel
         buttons = QDialogButtonBox(
             QDialogButtonBox.StandardButton.Ok |
             QDialogButtonBox.StandardButton.Cancel,
