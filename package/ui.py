@@ -18,7 +18,7 @@ import json
 from filesystem_scanner import find_exe_files, full_scan, quick_scan
 
 base_dir = os.path.dirname(os.path.abspath(__file__))
-relative_path = r'Models\[RandomForest] trained_models(2025-04-24 19-26-54)'  
+relative_path = r'Models\[SVM] (Deafault) trained_models(2025-04-24 20-09-03)'  
 chosen_model = os.path.abspath(os.path.join(base_dir, relative_path))
 
 class CircularProgressBar(QWidget):
@@ -90,7 +90,7 @@ class MainWindow(QMainWindow):
         if not icons_dir.exists():  # check if the folder exists
             raise FileNotFoundError(f"Icons folder not found in {base_dir}")    
         base_dir2 = os.path.dirname(os.path.abspath(__file__))
-        relative_path = r"Models\[SVM] trained_models(2025-04-24 20-09-03)"
+        relative_path = r"Models\[SVM] (Deafault) trained_models(2025-04-24 20-09-03)"
         self.chosen_model = os.path.abspath(os.path.join(base_dir2, relative_path))
         #root layout
         root = QWidget()
